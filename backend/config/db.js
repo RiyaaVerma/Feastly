@@ -1,5 +1,8 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config(); 
+
 
 export const connectDB=async()=>{
-  await mongoose.connect('mongodb+srv://RiyaVerma:Riya27nov03@cluster0.rnuczv6.mongodb.net/feastly').then(()=>console.log("DB CONNECTED"));
+  await mongoose.connect(process.env.MONGODB_URL).then(()=>console.log("DB CONNECTED"));
 }
