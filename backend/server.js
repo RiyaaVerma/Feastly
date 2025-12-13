@@ -28,7 +28,6 @@ dotenv.config();
   app.use("/api/cart",cartRouter)
   app.use("/api/order",placeOrder)
 
-
   app.get("/",(req,res)=>{
     res.send('API Working');
   });
